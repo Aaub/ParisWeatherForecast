@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':repository-weather', ':model', ':usecase'
 rootProject.name='ParisWeatherForecast'

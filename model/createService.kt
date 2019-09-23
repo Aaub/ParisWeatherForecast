@@ -1,0 +1,6 @@
+fun createService(): NasaApiService = Retrofit.Builder()
+    .baseUrl(URL)
+    .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
+    .addCallAdapterFactory(CoroutineCallAdapterFactory())
+    .build()
+    .create(NasaApiService::class.java)
