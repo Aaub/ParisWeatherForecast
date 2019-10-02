@@ -8,6 +8,13 @@ dependencies {
     /***  Kotlin  ***/
     implementation rootProject.ext.moduleDependencies.kotlin_stdlib
     implementation rootProject.ext.moduleDependencies.kotlin_ktx
+
+    /***  Network & REST  ***/
+    implementation rootProject.ext.moduleDependencies.retrofit2
+    implementation rootProject.ext.moduleDependencies.okHttp3
+    implementation rootProject.ext.moduleDependencies.gsonConverter
+    implementation rootProject.ext.moduleDependencies.coroutinesAdapter
+
 }
 
 sourceCompatibility = "7"

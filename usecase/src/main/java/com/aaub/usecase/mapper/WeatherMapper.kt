@@ -1,55 +1,39 @@
 package com.aaub.usecase.mapper
 
+import com.aaub.model.DayWeather
 import com.aaub.model.Detail
+import com.aaub.model.FiveDaysWeatherForecast
 import com.aaub.model.GivenPointWeather
+import com.aaub.repository.weather.model.Infos
 import com.aaub.repository.weather.model.WeatherForecastApiResponse
-import com.aaub.usecase.utils.getDayOfYear
+import com.aaub.usecase.utils.buildCalendar
+import java.util.*
 
-object WeatherMapper {
 
-    fun WeatherForecastApiResponse.toBusinessModel() {
-        val refDate = getDayOfYear(list.first().dt)
-        val index = 1
-        val firstDay = mutableListOf<GivenPointWeather>()
-        while (getDayOfYear(list[index].dt) == refDate) {
-            firstDay.add(
-                GivenPointWeather(
-                    date =,
-                    time =,
-                    imageUrl =,
-                    tempCurrent =,
-                    tempMin =,
-                    tempMax =,
-                    detail = Detail(
-                        atmoPressure =,
-                        humidityRate =,
-                        windSpeed =,
-                        cloudinessRate =,
-                        rainVolume =,
-                        snowHeight =
-                    )
-                )
-            )
+fun WeatherForecastApiResponse.toBusinessModel() = FiveDaysWeatherForecast(
+    list
+        .groupBy {
+            buildCalendar(it.dt).get(Calendar.DAY_OF_YEAR)
+        }.map {
+            DayWeather(it.value.map { infos ->
+                infos.toBusinessModel()
+            })
         }
+)
 
-
-    }
-
-
-    fun test() {
-        val codonTable = mapOf(
-            "ATT" to "Isoleucine",
-            "CAA" to "Glutamine",
-            "CGC" to "Arginine",
-            "GGC" to "Glycine"
-        )
-        val dnaFragment = "ATTCGCGGCCGCCAA"
-
-        val proteins = dnaFragment.chunked(3) {
-            codonTable[it.toString()] ?: error("Unknown codon")
-        }
-
-        println(proteins) // [Isoleucine, Arginine, Glycine, Arginine, Glutamine]
-    }
-}
+fun Infos.toBusinessModel() = GivenPointWeather(
+    date = buildCalendar(dt),
+    image = this.weather.first().icon,
+    tempCurrent = main.temp,
+    tempMin = main.temp_min,
+    tempMax = main.temp_max,
+    detail = Detail(
+        atmoPressure = main.pressure,
+        humidityRate = main.humidity,
+        windSpeed = wind.speed,
+        cloudinessRate = clouds.all,
+        rainVolume = rain?.volume ?: 0.0,
+        snowHeight = snow?.height ?: 0.0
+    )
+)
 

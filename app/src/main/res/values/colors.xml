@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+
+    <!--    Themes-->
+    <color name="colorPrimary">@color/pewter_blue</color>
+    <color name="colorPrimaryDark">@color/ucla_blue</color>
     <color name="colorAccent">#D81B60</color>
+
+
+    <!--    Five days-->
+    <color name="five_days_screen_background">@color/periwinkle_light</color>
+
+    <!--    Temerature TextView-->
+    <color name="temperature_textview_background">@color/dark_slate_gey</color>
+    <color name="temperature_textview_stroke">@color/black</color>
+
+    <!--    Forecast Detail-->
+    <color name="forecast_detail_separator_color">@color/ucla_blue</color>
+
+    <!--    card-->
+    <color name="card_background">@color/dark_slate_gey_light</color>
+
+    <!--    common-->
+    <color name="weather_value_textview_text_color">@color/white</color>
 </resources>

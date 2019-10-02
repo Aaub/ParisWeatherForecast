@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="periwinkle">#B6D4FF</color>
+    <color name="periwinkle_light">#BBB8D5FF</color>
+    <color name="dark_slate_gey">#2E475B</color>
+    <color name="dark_slate_gey_light">#AA2E475B</color>
+    <color name="black">#000000</color>
+    <color name="pewter_blue">#87A5C4</color>
+    <color name="ucla_blue">#57708E</color>
+    <color name="white">#FFFFFF</color>
+</resources>

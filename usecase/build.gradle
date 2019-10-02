@@ -12,7 +12,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.getParisFiveDaysWeatherForecast.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
 
@@ -26,6 +26,11 @@ android {
 }
 
 dependencies {
+
     implementation project(':model')
-    implementation project(':repository-weather')
+    implementation project(':repository')
+
+    implementation rootProject.ext.moduleDependencies.kotlin_coroutines
+
+
 }

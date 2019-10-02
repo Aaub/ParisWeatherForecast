@@ -1,3 +1,40 @@
 <resources>
-    <string name="app_name">ParisWeatherForecast</string>
+    <string name="app_name">Paris Weather Forecast</string>
+    <!--    DayForecastView-->
+    <string name="day_forecast_detail_button">Details</string>
+    <string name="day_forecast_min_temperature">Minimum</string>
+    <string name="day_forecast_max_temperature">Maximum</string>
+    <string name="day_forecast_average_temperature">Average</string>
+
+
+    <!--    day of the week-->
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="no_day"> </string>
+
+
+    <!--    activities-->
+    <string name="activity_forecast_detail"> Forecast Details</string>
+
+
+    <!--    Forecast Detail-->
+    <string name="title_atmospheric_pressure">Atmospheric Pressure</string>
+    <string name="title_humidity_rate">Humidity Rate</string>
+    <string name="title_wind_speed">Wind Speed</string>
+    <string name="title_cloudiness_rate">Cloud Cover</string>
+    <string name="title_rain_volume">Rain Volume</string>
+    <string name="title_snow_height">Snow Height</string>
+
+
+    <!--    units-->
+    <string name="rate">%</string>
+    <string name="pressure">hPa</string>
+    <string name="height">mm</string>
+    <string name="speed">m/s</string>
+    <string name="temperature">%1$s°C</string>
 </resources>

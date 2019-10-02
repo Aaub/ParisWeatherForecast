@@ -6,17 +6,18 @@ ext {
      */
     depsVersions = [
             gson             : "2.8.5",
-            retrofit2        : "2.5.0",
+            retrofit2        : "2.6.1",
             coroutines       : "1.1.1",
             coroutinesAdapter: "0.9.2",
             cardView         : "1.0.0",
             recyclerView     : "1.0.0",
             constraintLayout : "1.1.3",
-            lifecycle        : "1.1.1",
-            viewModelScope   : "2.1.0-beta01",
+            lifecycle        : "2.1.0",
+            viewModelScope   : "2.2.0-alpha05",
             ktx              : "1.0.2",
             appCompat        : "1.0.2",
-            glide          : "4.9.0",
+            glide            : "4.9.0",
+            gifDrawable      : "1.2.18",
             runner           : "1.2.0",
             espresso         : "3.2.0",
             okHttp3          : "3.12.0",
@@ -63,7 +64,8 @@ ext {
 
 
             //Libraries
-            glide                  : "com.github.bumptech.glide:glide:$depsVersions.glide",
+            glide                    : "com.github.bumptech.glide:glide:$depsVersions.glide",
+            gifDrawable              : "pl.droidsonroids.gif:android-gif-drawable:$depsVersions.gifDrawable",
 
 
             //Test

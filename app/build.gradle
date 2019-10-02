@@ -1,7 +1,5 @@
 apply plugin: 'com.android.application'
-
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -13,7 +11,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.getParisFiveDaysWeatherForecast.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -26,14 +24,22 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation project(':repository-weather')
+    implementation project(':usecase')
+    implementation project(':model')
 
 
     /***  Android  ***/
     implementation rootProject.ext.moduleDependencies.appCompat
+    implementation rootProject.ext.moduleDependencies.viewModelScope
+    implementation rootProject.ext.moduleDependencies.lifecycleExtensions
 
 
     /***  Test  ***/
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation rootProject.ext.moduleDependencies.kotlin_junit
     androidTestImplementation rootProject.ext.moduleDependencies.runner
     androidTestImplementation rootProject.ext.moduleDependencies.espresso
@@ -48,6 +54,7 @@ dependencies {
     annotationProcessor rootProject.ext.moduleDependencies.lifecycleAnnotations
     implementation rootProject.ext.moduleDependencies.lifecycleExtensions
 
-    /*** Glide ****/
+    /*** External Libraries ****/
     implementation rootProject.ext.moduleDependencies.glide
+    implementation rootProject.ext.moduleDependencies.gifDrawable
 }

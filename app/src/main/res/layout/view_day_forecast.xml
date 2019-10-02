@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.cardview.widget.CardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_small">
+
+        <TextView
+            android:id="@+id/view_day_forecast_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_triple"
+            android:textSize="@dimen/title_size"
+            android:textColor="@color/weather_value_textview_text_color"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="TextView" />
+
+        <ImageView
+            android:id="@+id/view_day_forecast_picto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="@dimen/margin_quadruple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_day_forecast_date"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/view_day_forecast_current_temp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_quadruple"
+            android:text="@string/day_forecast_average_temperature"
+            android:textColor="@color/weather_value_textview_text_color"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_day_forecast_picto" />
+
+        <TextView
+            android:id="@+id/view_day_forecast_current_temp"
+            style="@style/weather_value_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_day_forecast_current_temp_text"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/view_day_forecast_min_temp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_quadruple"
+            android:text="@string/day_forecast_min_temperature"
+            android:textColor="@color/weather_value_textview_text_color"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/view_day_forecast_min_temp"
+            app:layout_constraintStart_toStartOf="@+id/view_day_forecast_min_temp"
+            app:layout_constraintTop_toBottomOf="@+id/view_day_forecast_current_temp" />
+
+        <TextView
+            android:id="@+id/view_day_forecast_min_temp"
+            style="@style/weather_value_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            app:layout_constraintEnd_toStartOf="@+id/view_day_forecast_max_temp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_day_forecast_min_temp_text"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/view_day_forecast_max_temp"
+            style="@style/weather_value_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view_day_forecast_min_temp"
+            app:layout_constraintTop_toTopOf="@+id/view_day_forecast_min_temp"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/view_day_forecast_max_temp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/day_forecast_max_temperature"
+            android:textColor="@color/weather_value_textview_text_color"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/view_day_forecast_max_temp"
+            app:layout_constraintStart_toStartOf="@+id/view_day_forecast_max_temp"
+            app:layout_constraintTop_toTopOf="@+id/view_day_forecast_min_temp_text" />
+
+        <Button
+            android:id="@+id/view_day_forecast_details_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_quadruple"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view_day_forecast_min_temp"
+            tools:text="Button" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_forecast_detail_adapter_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_quadruple">
+
+    <com.aaub.parisweatherforecast.ui.SeparatorTextView
+        android:id="@+id/layout_forecast_detail_adapter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_double"
+        android:textColor="@color/forecast_detail_separator_color"
+        android:textSize="@dimen/title_size"
+        app:dividerColor="@color/forecast_detail_separator_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/title_cloudiness_rate" />
+
+    <TextView
+        android:id="@+id/layout_forecast_detail_adapter_worth"
+        style="@style/weather_value_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_big"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_forecast_detail_adapter_title"
+        tools:text="TextView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

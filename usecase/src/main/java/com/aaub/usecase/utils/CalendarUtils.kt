@@ -2,10 +2,10 @@ package com.aaub.usecase.utils
 
 import java.util.*
 
-fun getDayOfYear(timeInMilli: Int) = Calendar
-    .getInstance()
+private const val MILLISECONDS_MULTPLIER = 1000
+
+fun buildCalendar(timeInSeconds: Int) = GregorianCalendar()
     .apply {
-        timeInMillis = timeInMilli.toLong()
+        timeInMillis = timeInSeconds.toLong() * MILLISECONDS_MULTPLIER
     }
-    .get(Calendar.DAY_OF_YEAR)
 

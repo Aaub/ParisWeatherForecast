@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    CardView-->
+    <dimen name="card_elevation">3dp</dimen>
+    <dimen name="card_view_radius_big">8dp</dimen>
+
+
+    <!--    common-->
+    <dimen name="padding_small">3dp</dimen>
+    <dimen name="padding_default">6dp</dimen>
+    <dimen name="padding_double">12dp</dimen>
+    <dimen name="margin_small">3dp</dimen>
+    <dimen name="margin_default">6dp</dimen>
+    <dimen name="margin_double">12dp</dimen>
+    <dimen name="margin_triple">18dp</dimen>
+    <dimen name="margin_quadruple">24dp</dimen>
+
+
+    <!--    text-->
+    <dimen name="title_size">22sp</dimen>
+    <dimen name="font_big">20sp</dimen>
+
+</resources>
